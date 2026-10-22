@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 1298938991}
   - component: {fileID: 1298938990}
   - component: {fileID: 1298938992}
+  - component: {fileID: 1298938993}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -547,6 +548,21 @@ MonoBehaviour:
   minIntensity: 0.1
   maxIntensity: 3
   pulseSpeed: 0.5
+--- !u!114 &1298938993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298938988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74c3a545e6a848429c57d5180c9edfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bobbing
+  minHeight: -0.5
+  maxHeight: 0.5
+  speed: 0.5
 --- !u!1 &1316669762
 GameObject:
   m_ObjectHideFlags: 0
