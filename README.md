@@ -18,26 +18,36 @@ agli argomenti teorici del corso.
 
 ## Come usare la repository
 
-Ogni lezione ha **due tag**:
+Ogni studente lavora sul **proprio branch**, dalla prima all'ultima lezione: ogni lezione riparte
+esattamente da dove si era fermata la precedente.
+
+```bash
+git checkout -b mio-progetto lezione-01-inizio
+```
+
+Ogni lezione ha due parti: la **Parte A**, preparazione della scena in Editor seguendo le slide,
+e la **Parte B**, il codice generato con l'AI. Per ogni lezione ci sono tre tag di riferimento:
 
 | Tag | Contenuto |
 |---|---|
-| `lezione-NN-inizio` | Il punto di partenza del laboratorio: scena e asset pronti, codice da generare con l'AI |
-| `lezione-NN-fine` | La soluzione di riferimento del docente |
+| `lezione-NN-inizio` | Il punto di partenza: identico a `lezione-(NN-1)-fine` |
+| `lezione-NN-preparazione` | La soluzione della Parte A (scena preparata in Editor) |
+| `lezione-NN-fine` | La soluzione completa della lezione |
 
-Per lavorare su una lezione:
-
-```bash
-git checkout -b mia-lezione-03 lezione-03-inizio
-```
-
-Per confrontare il tuo lavoro con la soluzione:
+Per confrontare il tuo lavoro con le soluzioni:
 
 ```bash
+git diff lezione-03-preparazione
 git diff lezione-03-fine
 ```
 
-La consegna del laboratorio di ogni lezione è in [`Docs/Lezioni`](Docs/Lezioni).
+Se resti indietro, puoi ripartire dalla soluzione della lezione precedente:
+
+```bash
+git checkout -b ripartenza-04 lezione-04-inizio
+```
+
+La consegna di ogni lezione è nelle slide; in [`Docs/Lezioni`](Docs/Lezioni) c'è un promemoria scritto.
 
 ## Le lezioni
 
